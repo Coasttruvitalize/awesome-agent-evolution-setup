@@ -1,0 +1,64 @@
+.DS_Store
+
+node_modules/
+dist/
+.astro/
+.vercel/
+.netlify/
+
+# Local agent/runtime state.
+.aha/
+.claude/
+.genome/
+.gitnexus/
+.tmp/
+
+*.log
+*.tmp
+.env
+.env.*
+!.env.example
+.aha/
+.claude/
+.genome/
+output/
+
+# Local-only user input memory. Keep these on this machine, but never publish.
+CURRENT_GOAL.md
+docs/project-management/user-direct-inputs.md
+
+site/node_modules/
+site/dist/
+site/.astro/
+
+# Source mirrors and generated/raw collection artifacts are not public by default.
+# Public README keeps summarized indexes and external links instead.
+raw-blogs/
+raw-github/
+raw-papers/
+raw-social/
+raw-social-rank/
+raw-data-*.json
+raw-papers-*.json
+raw-social-*.json
+research/.anysearch-*-cache.json
+
+# One-off hourly automation scripts; keep durable Markdown notes instead.
+work/research/*hourly-public-metadata-update-*.mjs
+work/research/finalize-hourly-public-metadata-update-*.mjs
+
+# Local third-party repository mirrors.
+repos/
+# One-off cloned repositories placed at repo root.
+*__*/
+
+# LaTeX build artifacts.
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.out
+*.synctex.gz
+*.toc
+survey/latex/main.pdf
