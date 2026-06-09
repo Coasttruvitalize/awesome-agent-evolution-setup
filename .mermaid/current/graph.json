@@ -1,0 +1,194 @@
+{
+  "generated_at": "2026-06-05T22:00:00+08:00",
+  "truth_source": ".mermaid/current/graph.json",
+  "nodes": [
+    {
+      "id": "intent.direct-user-input",
+      "title": "Direct user intent",
+      "layer": "ops",
+      "status": "active",
+      "paths": [
+        "docs/project-management/user-direct-inputs.md",
+        "CURRENT_GOAL.md"
+      ]
+    },
+    {
+      "id": "raw.github.hourly-captures",
+      "title": "Hourly GitHub raw captures",
+      "layer": "raw",
+      "status": "updated",
+      "paths": [
+        "raw-github/composiohq_agent-orchestrator.md",
+        "raw-github/aq-medai_medmemorybench.md",
+        "raw-github/desplega-ai_agent-swarm.md",
+        "raw-github/vrsen_agency-swarm.md",
+        "raw-github/xskill-agent_xskill.md",
+        "raw-github/wanxingai_lightagent.md"
+      ]
+    },
+    {
+      "id": "raw.github.topic-indexing-evidence",
+      "title": "GitHub topic indexing evidence",
+      "layer": "processed",
+      "status": "verified",
+      "paths": [
+        "reports/github-topic-indexing-readiness.md",
+        "scripts/audit_github_topic_indexing.mjs",
+        "work/wiki/synthesis/github-topic-indexing-readiness.md"
+      ]
+    },
+    {
+      "id": "results.live-publication-readiness",
+      "title": "Live publication readiness evidence",
+      "layer": "results",
+      "status": "blocked",
+      "paths": [
+        "reports/live-publication-readiness.md",
+        "site/src/pages/reports/live-publication-readiness.astro"
+      ]
+    },
+    {
+      "id": "results.text-asset-indexability",
+      "title": "Text asset indexability coverage",
+      "layer": "results",
+      "status": "incomplete",
+      "paths": [
+        "reports/text-asset-indexability.md",
+        "scripts/audit_text_asset_indexability.mjs",
+        "site/src/pages/reports/text-asset-indexability.astro",
+        "work/wiki/synthesis/text-asset-indexability-coverage.md"
+      ]
+    },
+    {
+      "id": "processed.github-classification",
+      "title": "GitHub classification and project cards",
+      "layer": "processed",
+      "status": "updated",
+      "paths": [
+        "research/repo-classification.json",
+        "analysis/github-project-data-analysis.md",
+        "projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "projects/407-medmemorybench-agent-memory-benchmark.md"
+      ]
+    },
+    {
+      "id": "results.public-site",
+      "title": "Public site and report surfaces",
+      "layer": "results",
+      "status": "updated",
+      "paths": [
+        "site/src/data/projects.ts",
+        "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
+        "README.md",
+        "README-EN.md",
+        "README-ZH.md",
+        "CONTENT_INDEX.md"
+      ]
+    },
+    {
+      "id": "work.learning-note",
+      "title": "Learning note and run ledger",
+      "layer": "work",
+      "status": "updated",
+      "paths": [
+        "work/research/hourly-public-metadata-update-2026-06-05-2200.md"
+      ]
+    }
+  ],
+  "edges": [
+    [
+      "intent.direct-user-input",
+      "raw.github.hourly-captures",
+      "governs"
+    ],
+    [
+      "raw.github.hourly-captures",
+      "processed.github-classification",
+      "feeds"
+    ],
+    [
+      "raw.github.topic-indexing-evidence",
+      "results.public-site",
+      "clarifies-discovery"
+    ],
+    [
+      "results.live-publication-readiness",
+      "results.public-site",
+      "blocks-google-crawl-readiness"
+    ],
+    [
+      "results.text-asset-indexability",
+      "results.public-site",
+      "measures-text-coverage"
+    ],
+    [
+      "processed.github-classification",
+      "results.public-site",
+      "publishes"
+    ],
+    [
+      "processed.github-classification",
+      "work.learning-note",
+      "explains"
+    ],
+    [
+      "work.learning-note",
+      "intent.direct-user-input",
+      "handoff"
+    ]
+  ],
+  "current_run": {
+    "repos": [
+      {
+        "repo": "ComposioHQ/agent-orchestrator",
+        "raw_capture": "raw-github/composiohq_agent-orchestrator.md",
+        "report": "projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "site_report": "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "stars": 7400,
+        "forks": 1000,
+        "commits": 1276,
+        "last_visible_commit_date": "2026-06-01",
+        "theme": "harness"
+      },
+      {
+        "repo": "AQ-MedAI/MedMemoryBench",
+        "raw_capture": "raw-github/aq-medai_medmemorybench.md",
+        "report": "projects/407-medmemorybench-agent-memory-benchmark.md",
+        "site_report": "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
+        "stars": 95,
+        "forks": 8,
+        "commits": 44,
+        "last_visible_commit_date": "2026-05-01",
+        "theme": "memory"
+      },
+      {
+        "repo": "desplega-ai/agent-swarm",
+        "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
+        "theme": "framework"
+      },
+      {
+        "repo": "VRSEN/agency-swarm",
+        "raw_capture": "raw-github/vrsen_agency-swarm.md",
+        "theme": "framework"
+      },
+      {
+        "repo": "XSkill-Agent/XSkill",
+        "raw_capture": "raw-github/xskill-agent_xskill.md",
+        "theme": "skill"
+      },
+      {
+        "repo": "wanxingai/LightAgent",
+        "raw_capture": "raw-github/wanxingai_lightagent.md",
+        "theme": "framework"
+      }
+    ],
+    "blockers": [
+      "Custom-domain strict HTTPS remains blocked because GitHub Pages has not issued a certificate covering agent-evolution.com",
+      "Repository-wide text asset coverage remains incomplete: route-level SEO passes, but many processed assets are not yet public HTML",
+      "Long-tail i18n route parity remains incomplete",
+      "GitNexus symbol impact returned UNKNOWN for public report page targets; final scope is checked with detect-changes"
+    ],
+    "working_principle": "repository text inventory -> route/sitemap mapping -> coverage audit -> reports + wiki synthesis -> README/site report surfaces -> indexes + analysis + site build"
+  }
+}
